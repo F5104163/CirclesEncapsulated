@@ -5,15 +5,16 @@
 
 void Circle::Draw() const
 {
+	ChangeColour(r, g, b);
 	DrawCircle(position.X, position.Y, size);
 }
 
-float Circle::GetXLength() const
+int Circle::GetXLength() const
 {
 	return (this->size * 2);
 }
 
-float Circle::GetYLength() const
+int Circle::GetYLength() const
 {
 	return (this->size * 2);
 }

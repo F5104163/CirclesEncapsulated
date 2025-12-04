@@ -1,19 +1,56 @@
 ﻿  Circle.cpp
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Circle.cpp(8,33): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Circle.cpp(8,21): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Circle.cpp(13,21): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Circle.cpp(18,21): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-  Rectangle.cpp
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Rectangle.cpp(7,52): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Rectangle.cpp(7,44): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Rectangle.cpp(7,36): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Rectangle.cpp(7,24): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Rectangle.cpp(22,50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Rectangle.cpp(22,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12): error C2061: syntax error: identifier 'Shape'
+  (compiling source file 'Circle.cpp')
+      C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12):
+      the template instantiation context (the oldest one first) is
+          C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(8,7):
+          while compiling class template 'Trail'
+  
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Circle.cpp(9,33): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Circle.cpp(9,21): warning C4244: 'argument': conversion from 'const float' to 'int', possible loss of data
+  main.cpp
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12): error C2061: syntax error: identifier 'Shape'
+  (compiling source file 'main.cpp')
+      C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12):
+      the template instantiation context (the oldest one first) is
+          C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(8,7):
+          while compiling class template 'Trail'
+  
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\main.cpp(28,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Rectangle.h
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12): error C2061: syntax error: identifier 'Shape'
+  (compiling source file 'Rectangle.h')
+      C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12):
+      the template instantiation context (the oldest one first) is
+          C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(8,7):
+          while compiling class template 'Trail'
+  
+  Shape.cpp
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12): error C2061: syntax error: identifier 'Shape'
+  (compiling source file 'Shape.cpp')
+      C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(14,12):
+      the template instantiation context (the oldest one first) is
+          C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Trail.h(8,7):
+          while compiling class template 'Trail'
+  
+  Trail.cpp
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(91,7): error C2143: syntax error: missing ';' before '<'
+  (compiling source file 'Trail.cpp')
+      C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(91,7):
+      the template instantiation context (the oldest one first) is
+          C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(11,7):
+          while compiling class template 'Shape'
+  
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(91,2): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Trail.cpp')
+  
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(91,18): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'Trail.cpp')
+  
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(48,3): error C3861: 'myTrail': identifier not found
+  (compiling source file 'Trail.cpp')
+  
+C:\Users\f5104163\Source\repos\CirclesEncapsulated\Circles\Shape.h(48,3): error C2065: 'myTrail': undeclared identifier
+  (compiling source file 'Trail.cpp')
+  
   Generating Code...
-x64\Debug\Ball.obj : warning LNK4042: object specified more than once; extras ignored
-x64\Debug\Rectangle.obj : warning LNK4042: object specified more than once; extras ignored
-main.obj : error LNK2019: unresolved external symbol "public: __cdecl Shape<class Vector2>::Shape<class Vector2>(void)" (??0?$Shape@VVector2@@@@QEAA@XZ) referenced in function "public: __cdecl Rectangle::Rectangle(void)" (??0Rectangle@@QEAA@XZ)
-main.obj : error LNK2019: unresolved external symbol "public: virtual void __cdecl Shape<class Vector2>::Tick(void)" (?Tick@?$Shape@VVector2@@@@UEAAXXZ) referenced in function main
-main.obj : error LNK2019: unresolved external symbol "public: void __cdecl Shape<class Vector2>::Randomise(void)" (?Randomise@?$Shape@VVector2@@@@QEAAXXZ) referenced in function main
-C:\Users\f5104163\Source\repos\CirclesEncapsulated\x64\Debug\Circles.exe : fatal error LNK1120: 3 unresolved externals

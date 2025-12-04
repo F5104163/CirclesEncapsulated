@@ -21,16 +21,18 @@ using namespace std;
 
 #define SHAPE_COUNT 100
 
+#define SHAPE_TYPE Rectangle
+
 int main()
 {
 	srand(time(0));
 
 	cout << "Hello circles" << endl;
 
-	Rectangle shapes[SHAPE_COUNT];
+	SHAPE_TYPE shapes[SHAPE_COUNT];
 	for (int i = 0; i < SHAPE_COUNT; i++)
 	{
-		shapes[i] = Rectangle(); shapes[i].Randomise();
+		shapes[i] = SHAPE_TYPE(); shapes[i].Randomise();
 	}
 
 	while(UpdateFramework())

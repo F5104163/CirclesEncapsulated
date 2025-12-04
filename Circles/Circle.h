@@ -5,11 +5,11 @@
 class Circle : public Shape<int>
 {
 public:
-	virtual void Draw() const override;
+	void Draw() const override;
 
 protected:
-	virtual float GetXLength() const override;
-	virtual float GetYLength() const override;
+	int GetXLength() const override;
+	int GetYLength() const override;
 
-	virtual int RandomSize() const override;
+	int RandomSize() const override;
 };

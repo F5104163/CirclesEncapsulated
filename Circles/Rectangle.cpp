@@ -4,17 +4,18 @@
 
 void Rectangle::Draw() const
 {
+	ChangeColour(r, g, b);
 	DrawRectangle(position.X, position.Y, size.X, size.Y);
 }
 
-float Rectangle::GetXLength() const
+int Rectangle::GetXLength() const
 {
-	return size.X;
+	return roundf(size.X);
 }
 
-float Rectangle::GetYLength() const
+int Rectangle::GetYLength() const
 {
-	return size.Y;
+	return roundf(size.Y);
 }
 
 Vector2 Rectangle::RandomSize() const

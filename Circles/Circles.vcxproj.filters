@@ -37,6 +37,9 @@
     <ClCompile Include="Rectangle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Trail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Framework.h">
@@ -52,6 +55,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Shapes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Trail.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

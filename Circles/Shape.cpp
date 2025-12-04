@@ -1,75 +1,31 @@
 #include "Shape.h"
 #include <random>
+#include "Framework.h"
 
 extern int gScreenWidth;
 extern int gScreenHeight;
 
+template class Shape<Vector2>;
+template class Shape<float>;
+template class Shape<int>;
+
 template<typename T>
-Shape<T>::Shape() : position(Vector2(0,0)), size(0), r(255), g(255), b(255)
+Shape<T>::Shape() : position(Vector2(0, 0)), size(T{}), r(255), g(255), b(255), myTrail(Trail<T>(10))
 {
 
 }
 
 template<typename T>
-Shape<T>::Shape(Vector2 position, T size, char r, char g, char b) : position(position), size(size), r(r), g(g), b(b)
+Shape<T>::Shape(Vector2 position, T size, char r, char g, char b) : position(position), size(size), r(r), g(g), b(b), myTrail(Trail<T>(10))
 {
+
 }
 
 template<typename T>
 void Shape<T>::Draw() const
 {
+	// ChangeColour(r,g,b);
 	// Nothing to draw since its an abstract class
-}
-
-template<typename T>
-void Shape<T>::Tick()
-{
-	position += velocity;
-
-	bool updateColour = false;
-	if (position.X + GetXLength() > gScreenWidth || position.X < 0)
-	{
-		velocity.X *= -1;
-		position.X = position.X < 0 ? 0 : gScreenWidth - GetXLength();
-
-		updateColour = true;
-	}
-	if (position.Y + GetYLength() > gScreenHeight || position.Y < 0)
-	{
-		velocity.Y *= -1;
-		position.Y = position.Y < 0 ? 0 : gScreenHeight - GetYLength();
-		updateColour = true;
-	}
-
-	if (updateColour)
-	{
-		float r, g, b;
-		hsv(rand() % 360, 1, 1, r, g, b);
-		this->r = (int)round(r * 255);
-		this->g = (int)round(g * 255);
-		this->b = (int)round(b * 255);
-	}
-}
-
-template<typename T>
-void Shape<T>::Randomise()
-{
-	size = RandomSize();
-	velocity.X = rand() % 2 == 0 ? -1 : 1;
-	velocity.Y = rand() % 2 == 0 ? -1 : 1;
-	int rnd = (rand() % 4) + 1;
-	velocity.X *= rnd;
-	velocity.Y *= rnd;
-
-	float r = 0, g = 0, b = 0;
-	hsv(rand() % 360, 1, 1, r, g, b);
-	r *= 255;
-	g *= 255;
-	b *= 255;
-
-	this->r = r; this->g = g; this->b = b;
-
-	position.X = rand() % (gScreenWidth - GetXLength()); position.Y = rand() % (gScreenHeight - GetYLength());
 }
 
 template<typename T>
@@ -94,13 +50,13 @@ void Shape<T>::hsv(int h, float s, float v, float& r, float& g, float& b) const
 }
 
 template<typename T>
-float Shape<T>::GetXLength() const
+int Shape<T>::GetXLength() const
 {
 	return 0.0f;
 }
 
 template<typename T>
-float Shape<T>::GetYLength() const
+int Shape<T>::GetYLength() const
 {
 	return 0.0f;
 }
@@ -108,5 +64,5 @@ float Shape<T>::GetYLength() const
 template<typename T>
 T Shape<T>::RandomSize() const
 {
-	return T();
+	return T{};
 }
